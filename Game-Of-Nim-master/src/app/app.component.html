@@ -1,0 +1,51 @@
+<header>
+  Game Of Nim
+</header>
+<main>
+  <table (onScoreChange)="updateScores($event)"></table>
+  <div id="info-scoreboard">
+    <mat-card id="info-card">
+      <mat-card-header>
+        <mat-card-title>Man vs. Machine!</mat-card-title>
+        <mat-card-subtitle>How to play?</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Hello mortal!
+          <br>
+          You and the computer take turns and in each turn, you choose one row and remove one or more sticks
+          present in that row. 
+          <br>
+          You must remove at least one and may also choose to remove all the
+           sticks from that row! But you must remove sticks only
+          from one chosen row in a turn. 
+          <br>
+          Whoever removes the last stick loses the game! So your objective must be to make the
+          computer remove the last stick. 
+          <br>
+          Also, you decide who goes first. You clearly have the upper hand, or do you?
+          <br>
+
+          Good Luck!
+        </p>
+      </mat-card-content>
+    </mat-card>
+  
+    <div id="scoreboard">
+      <div>
+        Machine
+      </div>
+      <div>
+        You
+      </div>
+      <div id="machine-score">
+        {{machineScore}}
+      </div>
+      <div id="you-score">
+        {{yourScore}}
+      </div>
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
